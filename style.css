@@ -1,0 +1,129 @@
+* {
+  --background-color: aliceblue;
+  --scrollbar-width: 8px;
+  --scrollbar-height: 8px;
+  --blocked-section-color: #53d8fb;
+  --fixed-row-section-color: #66c3ff;
+  --fixed-col-section-color: #d4afb9;
+  --scroll-section-color: #dce1e9;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 64px;
+  text-align: center;
+  transition: color 700ms;
+  width: min-content;
+  margin: 0 auto;
+}
+
+.heading:hover {
+  color: gold;
+}
+
+.input-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.input-label {
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+input[type="number"] {
+  padding: 8px 8px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid lightgray;
+}
+
+input[type="number"]:hover {
+  border: 1px solid skyblue;
+}
+
+input[type="number"]:focus {
+  border: 1px solid skyblue;
+}
+
+.table-container {
+  margin-top: 100px;
+  margin: 100px auto;
+}
+.table {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(2, min-content);
+  justify-content: center;
+  grid-template-areas:
+    "blocked-section  fixed-col-section"
+    "fixed-row-section scrollable-section";
+}
+
+.table-item {
+  border: 0.5px solid black;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.blocked-section {
+  display: grid;
+  position: relative;
+}
+
+.blocked-section {
+  grid-area: blocked-section;
+  background-color: var(--blocked-section-color);
+}
+
+.fixed-col-section {
+  display: grid;
+  grid-area: fixed-col-section;
+  overflow-x: scroll;
+  background-color: var(--fixed-col-section-color);
+}
+.fixed-row-section {
+  display: grid;
+  grid-area: fixed-row-section;
+  overflow-y: scroll;
+  background-color: var(--fixed-row-section-color);
+}
+
+.scrollable-section {
+  grid-area: scrollable-section;
+  display: grid;
+  overflow: scroll;
+  background-color: var(--scroll-section-color);
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-height);
+  background-color: var(--background-color);
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.custom-scroll::-webkit-scrollbar-corner {
+  background: var(--background-color);
+}
+
+.hidden-scroll::-webkit-scrollbar {
+  scrollbar-width: none;
+  display: none;
+}
