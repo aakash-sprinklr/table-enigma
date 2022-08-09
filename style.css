@@ -55,11 +55,13 @@ input[type="number"]:focus {
 }
 
 .table-container {
-  margin-top: 100px;
-  margin: 100px auto;
+  margin: 100px 32px;
+  max-width: 95%;
 }
 .table {
   display: grid;
+  width: min-content;
+  margin: 0 auto;
   grid-template-rows: repeat(2, min-content);
   grid-template-columns: repeat(2, min-content);
   justify-content: center;
