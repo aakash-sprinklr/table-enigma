@@ -93,13 +93,13 @@ input[type="number"]:focus {
 .fixed-col-section {
   display: grid;
   grid-area: fixed-col-section;
-  overflow-x: scroll;
+  overflow-x: auto;
   background-color: var(--fixed-col-section-color);
 }
 .fixed-row-section {
   display: grid;
   grid-area: fixed-row-section;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: var(--fixed-row-section-color);
 }
 
