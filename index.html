@@ -1,0 +1,72 @@
+<html>
+
+    <head>
+        <script type="module" src="./script.js" defer></script>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <h1 class="heading">
+            fanTabulous
+        </h1>
+
+        <div class="input-container">
+            <div class="input-item">
+                <p class="input-label">
+                    Rows
+                </p>
+                <input name="total-rows" id="total-rows" type="number" min="0" step="1" value="10" />
+            </div>
+            <div class="input-item">
+                <p class="input-label">
+                    Cols
+                </p>
+                <input name="total-cols" id="total-cols" type="number" min="0" step="1" value="10" />
+            </div>
+            <div class="input-item">
+                <p class="input-label">
+                    Blocked Rows
+                </p>
+                <input name="blocked-rows" id="blocked-rows" type="number" min="0" step="1" value="2" />
+            </div>
+            <div class="input-item">
+                <p class="input-label">
+                    Blocked Cols
+                </p>
+                <input name="blocked-cols" id="blocked-cols" type="number" min="1" step="1" value="2" />
+            </div>
+            <div class="input-item">
+                <p class="input-label">
+                    View Rows
+                </p>
+                <input name="view-rows" id="view-rows" type="number" min="1" step="1" value="5" />
+            </div>
+            <div class="input-item">
+                <p class="input-label">
+                    View Cols
+                </p>
+                <input name="view-cols" id="view-cols" type="number" min="0" step="1" value="5" />
+            </div>
+
+
+        </div>
+
+        <div class="table-container">
+            <div class="table">
+                <div class="blocked-section">
+                </div>
+                <div class="fixed-col-section hidden-scroll">
+                </div>
+                <div class="fixed-row-section hidden-scroll">
+                </div>
+                <div class="scrollable-section custom-scroll">
+                </div>
+            </div>
+        </div>
+    </body>
+    <html>
